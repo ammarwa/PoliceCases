@@ -1,0 +1,1 @@
+json.partial! "police/police", police: @police

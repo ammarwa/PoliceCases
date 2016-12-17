@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Welcome Back, </strong>
+  <%= @police.name %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @police.username %>
+</p>
+
+<p>
+  <strong>Password: *****</strong>
+  <%= @police.password %>
+</p>
+
+
+
+<%= link_to 'Click here to access database', police_index_path %> | 
+<%= link_to 'Logout', logout_path %>

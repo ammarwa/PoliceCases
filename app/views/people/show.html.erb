@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @person.name %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @person.birthdate %>
+</p>
+
+<p>
+  <strong>Bloodtype:</strong>
+  <%= @person.bloodtype %>
+</p>
+
+<p>
+  <strong>Id no:</strong>
+  <%= @person.id_no %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', police_index_path %>

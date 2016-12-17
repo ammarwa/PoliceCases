@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  caseId: 
+  text: MyString
+  video: MyString
+  photo: MyString
+  sound: MyString
+  personId: 
+  done: 
+  date_time: 2016-12-13 22:08:20
+  location: MyString
+
+two:
+  caseId: 
+  text: MyString
+  video: MyString
+  photo: MyString
+  sound: MyString
+  personId: 
+  done: 
+  date_time: 2016-12-13 22:08:20
+  location: MyString

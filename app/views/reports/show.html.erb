@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @report.text %>
+</p>
+
+<p>
+  <video id="my-video" preload="auto" width="340" height="264"
+  poster="<%= @report.photo %>" data-setup="{}" autoplay="true" controls="play">
+    <source src="<%= @report.video %>" type='video/mp4'>
+
+  </video>
+
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <img src="<%= @report.photo %>" height="500"/>
+</p>
+
+<p>
+  <strong>Personid:</strong>
+  <%= (person = Person.find(@report.personId)).name %>
+  <%= link_to 'show this person Information', person %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @report.done %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= link_to 'Click Here', @report.location %>
+</p>
+
+<%= link_to 'Back', police_index_path %>

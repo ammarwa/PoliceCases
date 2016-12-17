@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person_id: 1
+  name: MyString
+  birthdate: 2016-12-13 21:25:36
+  no_cases: 1
+  bloodtype: MyString
+  id_no: MyString
+
+two:
+  person_id: 1
+  name: MyString
+  birthdate: 2016-12-13 21:25:36
+  no_cases: 1
+  bloodtype: MyString
+  id_no: MyString

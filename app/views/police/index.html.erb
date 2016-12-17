@@ -1,0 +1,36 @@
+
+<p id="notice"><%= notice %></p>
+<center>
+<h1>Police Reports</h1>
+
+<table border="4" bgcolor="F9FAED" align="center" width="100%" text-align="center">
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Video</th>
+      <th>Photo</th>
+      <th>Person Name</th>
+      <th>Location</th>
+      <th>Done</th>
+    </tr>
+  </thead>
+
+  <tbody style="text-align:center;">
+    <% @cases.each do |cases| %>
+      <tr>
+        <td text-align="center"><%= cases.text %></td>
+        <td text-align="center"><%= link_to 'Click Here', cases %></td>
+        <td text-align="center"><img src="/reports/<%= cases.photo %>" width="100" height="100"/></td>
+        <td text-align="center"><%= (Person.find(cases.personId)).name %></td>
+        <td text-align="center"><%= link_to 'Click Here', cases.location %></td>
+        <td text-align="center"><%= cases.done %></td>
+        <td text-align="center"><%= link_to 'Show', cases %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</center>
+<br>
+
+<%= link_to 'Register New Policeman', new_police_path %> |
+<%= link_to 'Logout', logout_path %>
