@@ -17,5 +17,9 @@
 
 
 
-<%= link_to 'Click here to access database', police_index_path %> | 
+<%= link_to 'Click here to access database', if session[:police_id] == nil
+                                              admins_path
+                                            else
+                                              police_index_url
+                                            end %> |
 <%= link_to 'Logout', logout_path %>

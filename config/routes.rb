@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :admins
   get 'sessions/new'
 
   resources :reports
@@ -11,6 +12,10 @@ Rails.application.routes.draw do
   get '/logout',  to: 'sessions#destroy'
 
   post '/mlogin', to: 'msession#create'
+
+  get '/sort_date', to: 'police#sortable'
+  get '/sort_loc', to: 'police#sortablel'
+  get '/sort_res', to: 'police#sortr'
 
   root 'sessions#new'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

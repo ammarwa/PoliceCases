@@ -20,6 +20,11 @@
 </p>
 
 <p>
+  <strong>Sound:</strong>
+  <embed src="<%= @report.sound %>" width="100" height="50"/>
+</p>
+
+<p>
   <strong>Personid:</strong>
   <%= (person = Person.find(@report.personId)).name %>
   <%= link_to 'show this person Information', person %>

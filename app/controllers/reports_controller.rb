@@ -5,7 +5,11 @@ class ReportsController < ApplicationController
   # GET /reports
   # GET /reports.json
   def index
-    @reports = Report.all
+    @reports = Report.order(:created_at)
+  end
+
+  def sortable
+    @reports = Report.order(:created_at)
   end
 
   # GET /reports/1
@@ -65,6 +69,14 @@ class ReportsController < ApplicationController
   end
 
   private
+
+  def sort_column
+    Report.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_report
       @report = Report.find(params[:id])

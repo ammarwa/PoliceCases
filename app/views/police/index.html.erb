@@ -2,6 +2,9 @@
 <p id="notice"><%= notice %></p>
 <center>
 <h1>Police Reports</h1>
+<%= link_to 'Sort by date', sort_date_path %> |
+<%= link_to 'Sort by location', sort_loc_path %>
+<%= link_to 'Reset Sort', sort_res_path %>
 
 <table border="4" bgcolor="F9FAED" align="center" width="100%" text-align="center">
   <thead>
@@ -12,6 +15,7 @@
       <th>Person Name</th>
       <th>Location</th>
       <th>Done</th>
+      <th>Date Time</th>
     </tr>
   </thead>
 
@@ -24,6 +28,7 @@
         <td text-align="center"><%= (Person.find(cases.personId)).name %></td>
         <td text-align="center"><%= link_to 'Click Here', cases.location %></td>
         <td text-align="center"><%= cases.done %></td>
+        <td text-align="center"><%= cases.created_at %></td>
         <td text-align="center"><%= link_to 'Show', cases %></td>
       </tr>
     <% end %>
@@ -32,5 +37,4 @@
 </center>
 <br>
 
-<%= link_to 'Register New Policeman', new_police_path %> |
 <%= link_to 'Logout', logout_path %>

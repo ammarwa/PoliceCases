@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Policemen</h1>
+
+<table border="4" bgcolor="F9FAED" align="center" width="100%" text-align="center">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Username</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody style="text-align:center;">
+    <% @police.each do |police| %>
+      <tr>
+        <td><%= police.name %></td>
+        <td><%= police.username %></td>
+        <td><%= link_to 'Show', police %></td>
+        <td><%= link_to 'Edit', edit_police_path(police) %></td>
+        <td><%= link_to 'Delete', police, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Logout', logout_path %> | 
+<%= link_to 'New Policeman', new_police_path %>

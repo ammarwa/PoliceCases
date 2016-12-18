@@ -8,6 +8,9 @@ class CreateReports < ActiveRecord::Migration[5.0]
       t.integer :personId
       t.boolean :done
       t.string :location
+      t.string :x
+      t.string :y
+      t.string :locsort
 
       t.timestamps
     end
